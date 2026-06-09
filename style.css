@@ -1,0 +1,215 @@
+﻿
+:root {
+  --desktop-header-h: 92px;
+  --mobile-bottom-h: 86px;
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { overflow-x: hidden; }
+
+.desktop-layout,
+.mobile-layout,
+.prototype,
+.frame-shell { overflow-x: hidden; }
+
+a { color: inherit; }
+
+.desktop-layout { display: none; }
+.mobile-layout { display: block; }
+
+.prototype {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.frame-shell {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.frame-shell.dialog {
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;
+  padding-top: 72px;
+}
+
+.frame-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.dialog .frame-img {
+  width: min(100%, var(--dialog-w));
+}
+
+.desktop-fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: var(--desktop-header-h);
+  overflow: hidden;
+  background: #fff;
+}
+
+.desktop-fixed-header .frame-img {
+  width: 100%;
+  max-width: none;
+}
+
+.mobile-fixed-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  height: var(--mobile-bottom-h);
+  overflow: hidden;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+}
+
+.mobile-fixed-bottom .frame-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: none;
+}
+
+.has-mobile-nav {
+  padding-bottom: var(--mobile-bottom-h);
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 40;
+  background: transparent;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fixed-hotspot {
+  position: fixed;
+  z-index: 45;
+}
+
+.mobile-only-open .frame-img {
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .desktop-layout { display: block; }
+  .mobile-layout { display: none; }
+}
+
+
+/* Overlay screens for image-based prototype */
+.overlay-prototype {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.overlay-bg,
+.overlay-scrim,
+.overlay-dismiss,
+.side-menu-panel,
+.modal-frame {
+  position: fixed;
+}
+
+.overlay-bg {
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.overlay-bg .frame-img {
+  width: 100%;
+  max-width: none;
+}
+
+.overlay-scrim {
+  inset: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, .42);
+  backdrop-filter: blur(1px);
+}
+
+.side-overlay .overlay-scrim {
+  background: rgba(0, 0, 0, .35);
+}
+
+.overlay-dismiss {
+  inset: 0;
+  z-index: 10;
+}
+
+.modal-frame {
+  left: 50%;
+  top: 50%;
+  z-index: 20;
+  width: min(calc(100vw - 32px), var(--dialog-w));
+  transform: translate(-50%, -50%);
+}
+
+.modal-frame .frame-img {
+  width: 100%;
+}
+
+.modal-frame .hotspot,
+.side-menu-panel .hotspot {
+  z-index: 45;
+}
+
+.side-menu-panel {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  width: var(--panel-w);
+  overflow: hidden;
+  background: transparent;
+}
+
+.side-menu-panel .frame-img {
+  width: 100vw;
+  max-width: none;
+}
+
+.desktop-side-panel {
+  --panel-w: min(27vw, 390px);
+}
+
+.mobile-side-panel {
+  --panel-w: 72vw;
+}
+
+@media (max-width: 767px) {
+  .modal-frame {
+    width: min(calc(100vw - 32px), var(--dialog-w));
+  }
+}
+
+

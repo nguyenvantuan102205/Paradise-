@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation - Paradise Hotel Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { padding: 2rem; max-width: 860px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif; }
+    h1 { font-size: 20px; font-weight: 600; margin: 0 0 0.25rem; color: #111; }
+    .subtitle { font-size: 14px; color: #888; margin: 0 0 2rem; }
+    .section-label { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.08em; margin: 1.75rem 0 0.75rem; }
+    .section-label:first-of-type { margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+    .page-btn { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; text-decoration: none; color: #111; transition: background 0.12s, border-color 0.12s, box-shadow 0.12s; }
+    .page-btn:hover { background: #f7f7f7; border-color: #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .page-btn .icon { font-size: 22px; color: #666; }
+    .page-btn .name { font-size: 14px; font-weight: 600; }
+    .page-btn .file { font-size: 11px; color: #aaa; }
+  </style>
+</head>
+<body>
+  <h1>Paradise Hotel — Prototype</h1>
+  <p class="subtitle">Chọn màn hình để xem</p>
+
+  <div class="section-label">Khởi đầu</div>
+  <div class="grid">
+    <a class="page-btn" href="open.html">
+      <span class="icon">🚪</span>
+      <span class="name">Mở app</span>
+      <span class="file">open.html</span>
+    </a>
+    <a class="page-btn" href="login.html">
+      <span class="icon">🔐</span>
+      <span class="name">Đăng nhập</span>
+      <span class="file">login.html</span>
+    </a>
+    <a class="page-btn" href="signup.html">
+      <span class="icon">✍️</span>
+      <span class="name">Đăng ký</span>
+      <span class="file">signup.html</span>
+    </a>
+  </div>
+
+  <div class="section-label">Màn hình chính</div>
+  <div class="grid">
+    <a class="page-btn" href="index.html">
+      <span class="icon">🏠</span>
+      <span class="name">Trang chủ</span>
+      <span class="file">index.html</span>
+    </a>
+    <a class="page-btn" href="side-menu.html">
+      <span class="icon">☰</span>
+      <span class="name">Side menu</span>
+      <span class="file">side-menu.html</span>
+    </a>
+    <a class="page-btn" href="wish.html">
+      <span class="icon">❤️</span>
+      <span class="name">Yêu thích</span>
+      <span class="file">wish.html</span>
+    </a>
+    <a class="page-btn" href="past-booking.html">
+      <span class="icon">📅</span>
+      <span class="name">Lịch đặt phòng</span>
+      <span class="file">past-booking.html</span>
+    </a>
+    <a class="page-btn" href="account.html">
+      <span class="icon">👤</span>
+      <span class="name">Tài khoản</span>
+      <span class="file">account.html</span>
+    </a>
+  </div>
+
+  <div class="section-label">Đặt phòng</div>
+  <div class="grid">
+    <a class="page-btn" href="room.html">
+      <span class="icon">🛏️</span>
+      <span class="name">Phòng</span>
+      <span class="file">room.html</span>
+    </a>
+    <a class="page-btn" href="info.html">
+      <span class="icon">ℹ️</span>
+      <span class="name">Thông tin phòng</span>
+      <span class="file">info.html</span>
+    </a>
+    <a class="page-btn" href="buy.html">
+      <span class="icon">💳</span>
+      <span class="name">Thanh toán</span>
+      <span class="file">buy.html</span>
+    </a>
+    <a class="page-btn" href="review.html">
+      <span class="icon">⭐</span>
+      <span class="name">Đánh giá</span>
+      <span class="file">review.html</span>
+    </a>
+  </div>
+
+  <div class="section-label">Trạng thái</div>
+  <div class="grid">
+    <a class="page-btn" href="cant-book.html">
+      <span class="icon">🚫</span>
+      <span class="name">Không thể đặt</span>
+      <span class="file">cant-book.html</span>
+    </a>
+    <a class="page-btn" href="out-of.html">
+      <span class="icon">⚠️</span>
+      <span class="name">Hết phòng</span>
+      <span class="file">out-of.html</span>
+    </a>
+    <a class="page-btn" href="alert.html">
+      <span class="icon">🔔</span>
+      <span class="name">Thông báo</span>
+      <span class="file">alert.html</span>
+    </a>
+  </div>
+</body>
+</html>
